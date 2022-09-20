@@ -1,0 +1,12 @@
+version: '3'
+services:
+  python-ml:
+    build: .
+    volumes:
+      - ../workspace:/home/vscode/workspace
+    command: sleep infinity
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
