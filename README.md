@@ -13,6 +13,7 @@ The container is based on the [nvidia/cuda](https://hub.docker.com/r/nvidia/cuda
 - CUDA 11.7.1
 - Python 3.10
 - PyTorch
+- Windows Subsystem for Linux 2 (WSL2)
   
 
 ## Usage

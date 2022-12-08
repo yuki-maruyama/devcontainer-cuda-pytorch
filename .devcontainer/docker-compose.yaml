@@ -2,9 +2,17 @@ version: '3'
 services:
   python-ml:
     build: .
+    environment:
+      - DISPLAY=$DISPLAY
+      - WAYLAND_DISPLAY=$WAYLAND_DISPLAY
+      - XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR
+      - PULSE_SERVER=$PULSE_SERVER
     volumes:
       - ../workspace:/home/vscode/workspace
     command: sleep infinity
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /mnt/wslg:/mnt/wslg
     deploy:
       resources:
         reservations:
